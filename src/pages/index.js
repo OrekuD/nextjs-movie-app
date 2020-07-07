@@ -1,17 +1,12 @@
 import { Categories, Card, Layout } from "../components";
-
-const dummy = [
-  { id: Math.random().toString() },
-  { id: Math.random().toString() },
-  { id: Math.random().toString() },
-  { id: Math.random().toString() },
-];
+import { dummy } from "../dummy-data";
 
 const Index = () => (
   <Layout>
+    <p> Now showing </p>
     <div className="banner">
       {dummy.map((item) => (
-        <Card />
+        <Card key={item.id} data={item} />
       ))}
     </div>
     <Categories />
