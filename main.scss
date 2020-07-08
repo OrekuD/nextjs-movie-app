@@ -24,16 +24,29 @@ header {
   height: 100px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 40px;
 
   h3 {
     font-weight: 200;
     cursor: pointer;
   }
+
+  svg {
+    cursor: pointer;
+  }
 }
 
 .container {
   padding: 0 40px;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 500px) {
+    padding: 0 10px;
+  }
 }
 
 .banner {
@@ -76,4 +89,35 @@ header {
   margin: 0 30px 30px 0;
   background-color: yellow;
   cursor: pointer;
+}
+
+.searchbar {
+  margin: 0 auto;
+  width: 60%;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  input {
+    width: 90%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    border: none;
+    padding-left: 20px;
+    margin-right: 10px;
+    color: #ffffff;
+    font-size: 16px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  svg {
+    cursor: pointer;
+  }
 }

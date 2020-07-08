@@ -17,7 +17,7 @@ const Category = ({ name, id }) => {
     );
     const data = await response.json();
     setData(data.results);
-    console.log(data);
+    // console.log(data);
   };
 
   if (!data || data.length === 0) {

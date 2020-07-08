@@ -19,11 +19,12 @@ const Index = ({ data }) => {
 };
 
 Index.getInitialProps = async () => {
-  const response = await fetch(
-    `https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.MOVIE_DB_API_KEY}`
-  );
-  const data = await response.json();
-  return { data: data.results };
+  // const response = await fetch(
+  //   `https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.MOVIE_DB_API_KEY}`
+  // );
+  // const data = await response.json();
+  // return { data: data.results };
+  return { data: [{ key: "1" }] };
 };
 
 export default Index;
