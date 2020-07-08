@@ -1,7 +1,6 @@
-import { useState } from "react";
-import Category from "./Category";
+import { Category } from "./components";
 
-const genres = [
+export const genres = [
   {
     id: 28,
     name: "Action",
@@ -53,27 +52,3 @@ const genres = [
     component: <Category name="Science Fiction" id={878} />,
   },
 ];
-
-const Categories = () => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  return (
-    <div className="categories">
-      <p className="title"> Browse by categories </p>
-
-      <div className="list">
-        {genres.map(({ name, id }, index) => (
-          <p
-            key={id}
-            onClick={() => setSelectedIndex(index)}
-            className={index === selectedIndex ? "selected" : ""}
-          >
-            {name}
-          </p>
-        ))}
-      </div>
-      {genres[selectedIndex].component}
-    </div>
-  );
-};
-
-export default Categories;

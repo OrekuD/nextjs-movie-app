@@ -52,9 +52,10 @@ header {
     display: flex;
     margin-top: 20px;
     margin-bottom: 30px;
+    flex-wrap: wrap;
 
     p {
-      margin-right: 30px;
+      margin: 0 30px 30px 0;
       padding: 5px 20px 5px;
       border-radius: 20px;
       cursor: pointer;
@@ -69,10 +70,10 @@ header {
 }
 
 .card {
-  width: 200px;
+  width: 250px;
   height: 200px;
   border-radius: 10px;
-  margin: 0 20px 20px 0;
+  margin: 0 30px 30px 0;
   background-color: yellow;
   cursor: pointer;
 }
