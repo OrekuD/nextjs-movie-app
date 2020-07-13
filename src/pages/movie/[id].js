@@ -63,9 +63,17 @@ const Movie = () => {
   return (
     <Layout>
       <div className="movie">
-        <div className="backdrop_container"></div>
+        <div className="backdrop_container">
+          <div className="loader">
+            <Spinner />
+          </div>
+        </div>
         <div className="top_container">
-          <div className="poster_container"></div>
+          <div className="poster_container">
+            <div className="loader">
+              <Spinner />
+            </div>
+          </div>
           <div className="content">
             <h4> {title} </h4>
             <StarRatings rating={vote_average} />

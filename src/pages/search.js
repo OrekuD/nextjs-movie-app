@@ -1,4 +1,4 @@
-import { Layout, SearchBar, Card } from "../components";
+import { Layout, SearchBar, CategoryCard } from "../components";
 import { useState } from "react";
 import { dummy } from "../dummy-data";
 
@@ -25,11 +25,11 @@ const Search = () => {
           <p> loading... </p>
         </div>
       ) : (
-        <div>
+        <div className="search">
           <p> Search results </p>
-          <div>
+          <div className="category">
             {dummy.map((item, index) => (
-              <Card data={item} key={index} />
+              <CategoryCard data={item} key={index} />
             ))}
           </div>
         </div>
