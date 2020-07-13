@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { Layout, Spinner } from "../../components";
+import { Layout, Spinner, StarRatings } from "../../components";
 import { useEffect, useState } from "react";
 import { MOVIE_DB_API_KEY } from "../../constants";
 import { movie } from "../../config";
@@ -68,7 +68,7 @@ const Movie = () => {
           <div className="poster_container"></div>
           <div className="content">
             <h4> {title} </h4>
-            <div className="star" />
+            <StarRatings rating={vote_average} />
             <div className="row">
               <p className="text1">
                 {vote_average} <span>/ 10 </span>
@@ -82,9 +82,16 @@ const Movie = () => {
             </div>
           </div>
         </div>
-        <div className="bottom-container">
+        <div className="bottom_container">
           <p className="title"> Storyline </p>
-          <p className="storyline">{overview}</p>
+          <p className="overview">{overview}</p>
+          <div className="genres">
+            {genres.map(({ id, name }) => (
+              <div key={id} className="badge">
+                <p> {name} </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </Layout>

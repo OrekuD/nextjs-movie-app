@@ -27,13 +27,23 @@ header {
   justify-content: space-between;
   padding: 0 40px;
 
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 500px) {
+    padding: 0 10px;
+  }
+
   h3 {
     font-weight: 200;
     cursor: pointer;
+    font-size: 22px;
   }
 
   svg {
     cursor: pointer;
+    margin-top: 10px;
   }
 }
 
@@ -257,51 +267,90 @@ header {
   display: flex;
   flex-direction: column;
   padding: 0 40px;
+  color: #ffffff;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 600px) {
+    margin: 0 -11px;
+    padding: 0;
+  }
 
   .backdrop_container {
     height: 350px;
-    background-color: red;
+    background-color: yellow;
+
+    @media (max-width: 600px) {
+      height: 250px;
+      padding: 0;
+    }
   }
 
   .top_container {
     height: 200px;
-    background-color: yellow;
     display: flex;
     padding: 0 40px;
+
+    @media (max-width: 768px) {
+      padding: 0 20px;
+    }
+
+    @media (max-width: 600px) {
+      padding: 0 15px;
+    }
 
     .poster_container {
       width: 24px * 10;
       height: 36px * 10;
       background-color: cyan;
       margin-top: -160px;
+
+      @media (max-width: 768px) {
+        width: 24px * 8;
+        height: 36px * 8;
+        margin-top: -130px;
+      }
+
+      @media (max-width: 600px) {
+        width: 24px * 6;
+        height: 36px * 6;
+        margin-top: -100px;
+      }
     }
 
     .content {
       padding: 0 15px;
-      color: #ffffff;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      // justify-content: space-evenly;
+      background-color: orange;
+
+      @media (max-width: 1000px) {
+        width: 60%;
+      }
+
+      @media (max-width: 600px) {
+        padding: 0 5px;
+      }
 
       h4 {
         font-size: 22px;
-        // margin: 10px 0;
-      }
+        margin: 5px 0;
 
-      .star {
-        width: 150px;
-        height: 50px;
-        background-color: orange;
-        // margin: 10px 0;
+        @media (max-width: 500px) {
+          font-size: 18px;
+        }
       }
 
       .row {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin: 5px 0;
 
         .text1 {
-          // margin: 10px 0;
           font-size: 22px;
 
           span {
@@ -312,7 +361,6 @@ header {
 
         .text2 {
           color: grey;
-          // margin: 10px 0;
           font-size: 18px;
         }
       }
@@ -320,5 +368,44 @@ header {
   }
 
   .bottom_container {
+    margin-bottom: 50px;
+
+    @media (max-width: 600px) {
+      padding: 0 15px;
+    }
+
+    .overview {
+      font-size: 20px;
+      width: 80%;
+      line-height: 22px;
+      margin-bottom: 20px;
+
+      @media (max-width: 600px) {
+        width: 95%;
+      }
+    }
+
+    .genres {
+      display: flex;
+      flex-wrap: wrap;
+
+      .badge {
+        background-color: grey;
+        padding: 5px 10px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 10px 10px 0;
+      }
+    }
   }
+}
+
+.star_rating {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

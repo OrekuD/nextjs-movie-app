@@ -5,11 +5,11 @@ const Header = () => {
   return (
     <header>
       <Link as="/" href="/">
-        <h3> Header </h3>
+        <h3> MoviesApp </h3>
       </Link>
       <Link href="/search">
         <div>
-          <Search color="#ffffff" size="24px" />{" "}
+          <Search color="#ffffff" size="24px" />
         </div>
       </Link>
     </header>
