@@ -21,7 +21,7 @@ body {
 }
 
 header {
-  height: 100px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -109,7 +109,7 @@ header {
   }
 }
 
-.trending {
+.title {
   font-size: 34px;
   font-weight: 600;
   margin: 30px 0;
@@ -250,5 +250,75 @@ header {
   }
   100% {
     opacity: 0;
+  }
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+
+  .backdrop_container {
+    height: 350px;
+    background-color: red;
+  }
+
+  .top_container {
+    height: 200px;
+    background-color: yellow;
+    display: flex;
+    padding: 0 40px;
+
+    .poster_container {
+      width: 24px * 10;
+      height: 36px * 10;
+      background-color: cyan;
+      margin-top: -160px;
+    }
+
+    .content {
+      padding: 0 15px;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      h4 {
+        font-size: 22px;
+        // margin: 10px 0;
+      }
+
+      .star {
+        width: 150px;
+        height: 50px;
+        background-color: orange;
+        // margin: 10px 0;
+      }
+
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .text1 {
+          // margin: 10px 0;
+          font-size: 22px;
+
+          span {
+            color: grey;
+            font-size: 18px;
+          }
+        }
+
+        .text2 {
+          color: grey;
+          // margin: 10px 0;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .bottom_container {
   }
 }

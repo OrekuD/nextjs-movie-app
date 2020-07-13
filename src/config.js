@@ -51,10 +51,10 @@ const res = {
 
 // request
 
-const fetch = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.MOVIE_DB_API_KEY}&language=en-US`;
+// const fetch = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.MOVIE_DB_API_KEY}&language=en-US`;
 
 // response
-const movie = {
+export const movie = {
   adult: false,
   backdrop_path: "/m11Mej9vbQqcXWgYrgPboCJ9NUh.jpg",
   belongs_to_collection: null,
@@ -290,4 +290,4 @@ const r = {
 // search by genreIds
 
 //request
-const re = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.MOVIE_DB_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=2017-01-01&primary_release_date.lte=2020-12-31&vote_average.gte=6&with_genres=${id}`;
+// const re = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.MOVIE_DB_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=2017-01-01&primary_release_date.lte=2020-12-31&vote_average.gte=6&with_genres=${id}`;

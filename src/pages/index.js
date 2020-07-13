@@ -8,7 +8,7 @@ const Index = ({ data }) => {
   }
   return (
     <Layout>
-      <p className="trending"> Trending </p>
+      <p className="title"> Trending </p>
       <div className="banner">
         {data.slice(0, 7).map((item) => (
           <Card key={item.id} data={item} />
