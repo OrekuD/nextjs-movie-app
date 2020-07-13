@@ -2,6 +2,7 @@ import { dummy } from "../dummy-data";
 import Card from "./Card";
 import { useState, useEffect } from "react";
 import fetch from "isomorphic-unfetch";
+import CategoryCard from "./CategoryCard";
 
 const Category = ({ name, id }) => {
   const [data, setData] = useState([]);
@@ -26,10 +27,9 @@ const Category = ({ name, id }) => {
 
   return (
     <div>
-      <h1> {name} </h1>
-      <div className="banner">
+      <div className="category">
         {data.map((item) => (
-          <Card key={item.id} data={item} />
+          <CategoryCard key={item.id} data={item} />
         ))}
       </div>
     </div>

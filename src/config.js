@@ -143,7 +143,130 @@ const movie = {
 
 // request https://api.themoviedb.org/3/search/movie?api_key=005d6a62314e432e6fe64e784f23f799&language=en-US&query=avengers&page=1&include_adult=false
 
+// request tv shows
+
+// https://api.themoviedb.org/3/search/tv?api_key=005d6a62314e432e6fe64e784f23f799&language=en-US&page=1&query=ozark&include_adult=false
+
 // response
+
+const responseTv = {
+  backdrop_path: "/hNaBXLiLTxMhtj7IFjOdJngXxxr.jpg",
+  created_by: [
+    {
+      id: 1281388,
+      credit_id: "589d4676c3a3685f970029be",
+      name: "Bill Dubuque",
+      gender: 2,
+      profile_path: "/nPiWslnfdaWuiSlX1K8gpX5ogzh.jpg",
+    },
+    {
+      id: 1318813,
+      credit_id: "589d46b99251412cc60027ad",
+      name: "Mark Williams",
+      gender: 2,
+      profile_path: null,
+    },
+  ],
+  episode_run_time: [80, 56],
+  first_air_date: "2017-07-21",
+  genres: [
+    {
+      id: 80,
+      name: "Crime",
+    },
+    {
+      id: 18,
+      name: "Drama",
+    },
+  ],
+  homepage: "https://www.netflix.com/title/80117552",
+  id: 69740,
+  in_production: true,
+  languages: ["en"],
+  last_air_date: "2020-03-27",
+  last_episode_to_air: {
+    air_date: "2020-03-27",
+    episode_number: 10,
+    id: 2201370,
+    name: "All In",
+    overview:
+      "While Wendy battles personal demons, Marty struggles to keep their lives from falling apart. Darlene does Ruth a favor.",
+    production_code: "",
+    season_number: 3,
+    show_id: 69740,
+    still_path: "/8ukoEp7ZNQLTnVAeIYPrUuiVURI.jpg",
+    vote_average: 8.6,
+    vote_count: 5,
+  },
+  name: "Ozark",
+  next_episode_to_air: null,
+  networks: [
+    {
+      name: "Netflix",
+      id: 213,
+      logo_path: "/wwemzKWzjKYJFfCeiB57q3r4Bcm.png",
+      origin_country: "",
+    },
+  ],
+  number_of_episodes: 30,
+  number_of_seasons: 3,
+  origin_country: ["US"],
+  original_language: "en",
+  original_name: "Ozark",
+  overview:
+    "A financial adviser drags his family from Chicago to the Missouri Ozarks, where he must launder $500 million in five years to appease a drug boss.",
+  popularity: 32.361,
+  poster_path: "/oy7Peo5iFIt9sNM59lN6csbJeX2.jpg",
+  production_companies: [
+    {
+      id: 2531,
+      logo_path: "/pC2iDCDCvV85vOBP7a5Ukxuc0Du.png",
+      name: "MRC",
+      origin_country: "US",
+    },
+    {
+      id: 5357,
+      logo_path: "/19A0Ilxeh1bWMlyMtMgGzcNBn07.png",
+      name: "Zero Gravity Management",
+      origin_country: "US",
+    },
+  ],
+  seasons: [
+    {
+      air_date: "2017-07-21",
+      episode_count: 10,
+      id: 84057,
+      name: "Season 1",
+      overview: "",
+      poster_path: "/x7M93pIs7spQRLjtcNra1dDemxx.jpg",
+      season_number: 1,
+    },
+    {
+      air_date: "2018-08-31",
+      episode_count: 10,
+      id: 105425,
+      name: "Season 2",
+      overview:
+        "Marty's plan to open a riverboat casino is complicated by Darlene Snell's schemes, Ruth's paroled father, state politics and a Kansas City mobster.",
+      poster_path: "/pXAR26dF40FTJc6TkfALlnRGxcT.jpg",
+      season_number: 2,
+    },
+    {
+      air_date: "2020-03-27",
+      episode_count: 10,
+      id: 140314,
+      name: "Season 3",
+      overview:
+        "Business as usual? No such thing. As Marty and Wendy clash over whether or not to expand, a surprise visitor turns their personal lives upside down.",
+      poster_path: "/ptRaE7lPLbrM0cuwoDKHHisZPMi.jpg",
+      season_number: 3,
+    },
+  ],
+  status: "Returning Series",
+  type: "Scripted",
+  vote_average: 8.1,
+  vote_count: 717,
+};
 
 // array of objects
 const r = {

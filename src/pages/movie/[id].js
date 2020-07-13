@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
-import { Layout } from "../../components";
+import { Layout, Spinner } from "../../components";
 import { useEffect, useState } from "react";
+import { MOVIE_DB_API_KEY } from "../../constants";
 
 const Movie = () => {
   const router = useRouter();
@@ -15,7 +16,7 @@ const Movie = () => {
   const fetchData = async () => {
     // console.log(router);
     const response = await fetch(
-      `https://api.themoviedb.org/3/movie/${router.query.id}?api_key=005d6a62314e432e6fe64e784f23f799&language=en-US`
+      `https://api.themoviedb.org/3/movie/${router.query.id}?api_key=${MOVIE_DB_API_KEY}&language=en-US`
     );
     const data = await response.json();
     // setData(data.results);
@@ -24,7 +25,19 @@ const Movie = () => {
   };
 
   if (!isLoaded) {
-    return <h1> Place some spinner here </h1>;
+    return (
+      <div
+        style={{
+          height: "100%",
+          width: "100%",
+          display: "flex",
+          paddingTop: 100,
+          justifyContent: "center",
+        }}
+      >
+        <Spinner />
+      </div>
+    );
   } else {
     return <Layout> {data.title} </Layout>;
   }

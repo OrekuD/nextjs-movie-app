@@ -1,5 +1,6 @@
 import { Categories, Card, Layout } from "../components";
-import fetch from "isomorphic-unfetch";
+// import fetch from "isomorphic-unfetch";
+import { MOVIE_DB_API_KEY } from "../constants";
 
 const Index = ({ data }) => {
   if (!data) {
@@ -7,7 +8,7 @@ const Index = ({ data }) => {
   }
   return (
     <Layout>
-      <p> Trending </p>
+      <p className="trending"> Trending </p>
       <div className="banner">
         {data.slice(0, 7).map((item) => (
           <Card key={item.id} data={item} />
@@ -19,12 +20,16 @@ const Index = ({ data }) => {
 };
 
 Index.getInitialProps = async () => {
-  // const response = await fetch(
-  //   `https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.MOVIE_DB_API_KEY}`
-  // );
-  // const data = await response.json();
-  // return { data: data.results };
-  return { data: [{ key: "1" }] };
+  const response = await fetch(
+    `https://api.themoviedb.org/3/trending/movie/day?api_key=${MOVIE_DB_API_KEY}`,
+    {
+      headers: {
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+      },
+    }
+  );
+  const data = await response.json();
+  return { data: data.results };
 };
 
 export default Index;
